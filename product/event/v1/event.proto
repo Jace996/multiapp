@@ -1,0 +1,5 @@
+syntax = "proto3";
+package product.event;
+
+option go_package = "github.com/jace996/multiapp/product/event/v1;v1";
+
