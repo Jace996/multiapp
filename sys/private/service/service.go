@@ -19,7 +19,7 @@ import (
 	v12 "github.com/jace996/multiapp/sys/api/locale/v1"
 	v1 "github.com/jace996/multiapp/sys/api/menu/v1"
 	"github.com/jace996/multiapp/sys/private/conf"
-	"github.com/goava/di"
+	"github.com/defval/di"
 	"github.com/hibiken/asynq"
 	"net/http"
 )

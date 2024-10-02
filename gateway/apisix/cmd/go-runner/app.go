@@ -14,7 +14,7 @@ import (
 	uapi "github.com/jace996/multiapp/user/api"
 	"github.com/jace996/saas"
 	shttp "github.com/jace996/saas/http"
-	"github.com/goava/di"
+	"github.com/defval/di"
 )
 
 type App struct {

@@ -25,7 +25,7 @@ func (s *KeyService) DeleteJsonWebKeySet(ctx context.Context, req *pb.DeleteJson
 	if _, err := s.auth.Check(ctx, authz.NewEntityResource(api.ResourceKey, "*"), authz.DeleteAction); err != nil {
 		return nil, err
 	}
-	raw, err := s.client.JwkApi.DeleteJsonWebKeySet(ctx, req.Set).Execute()
+	raw, err := s.client.JwkAPI.DeleteJsonWebKeySet(ctx, req.Set).Execute()
 	if err != nil {
 		return nil, TransformHydraErr(raw, err)
 	}
@@ -35,7 +35,7 @@ func (s *KeyService) GetJsonWebKeySet(ctx context.Context, req *pb.GetJsonWebKey
 	if _, err := s.auth.Check(ctx, authz.NewEntityResource(api.ResourceKey, "*"), authz.ReadAction); err != nil {
 		return nil, err
 	}
-	resp, raw, err := s.client.JwkApi.GetJsonWebKeySet(ctx, req.Set).Execute()
+	resp, raw, err := s.client.JwkAPI.GetJsonWebKeySet(ctx, req.Set).Execute()
 	if err != nil {
 		return nil, TransformHydraErr(raw, err)
 	}
@@ -45,7 +45,7 @@ func (s *KeyService) CreateJsonWebKeySet(ctx context.Context, req *pb.CreateJson
 	if _, err := s.auth.Check(ctx, authz.NewEntityResource(api.ResourceKey, "*"), authz.CreateAction); err != nil {
 		return nil, err
 	}
-	resp, raw, err := s.client.JwkApi.CreateJsonWebKeySet(ctx, req.Set).CreateJsonWebKeySet(client.CreateJsonWebKeySet{
+	resp, raw, err := s.client.JwkAPI.CreateJsonWebKeySet(ctx, req.Set).CreateJsonWebKeySet(client.CreateJsonWebKeySet{
 		Alg: req.Keys.Alg,
 		Kid: req.Keys.Kid,
 		Use: req.Keys.Use,
@@ -59,7 +59,7 @@ func (s *KeyService) UpdateJsonWebKeySet(ctx context.Context, req *pb.UpdateJson
 	if _, err := s.auth.Check(ctx, authz.NewEntityResource(api.ResourceKey, "*"), authz.UpdateAction); err != nil {
 		return nil, err
 	}
-	resp, raw, err := s.client.JwkApi.SetJsonWebKeySet(ctx, req.Set).JsonWebKeySet(mapPbSet(req.Keys)).Execute()
+	resp, raw, err := s.client.JwkAPI.SetJsonWebKeySet(ctx, req.Set).JsonWebKeySet(mapPbSet(req.Keys)).Execute()
 	if err != nil {
 		return nil, TransformHydraErr(raw, err)
 	}
@@ -69,7 +69,7 @@ func (s *KeyService) DeleteJsonWebKey(ctx context.Context, req *pb.DeleteJsonWeb
 	if _, err := s.auth.Check(ctx, authz.NewEntityResource(api.ResourceKey, "*"), authz.DeleteAction); err != nil {
 		return nil, err
 	}
-	raw, err := s.client.JwkApi.DeleteJsonWebKey(ctx, req.Kid, req.Set).Execute()
+	raw, err := s.client.JwkAPI.DeleteJsonWebKey(ctx, req.Kid, req.Set).Execute()
 	if err != nil {
 		return nil, TransformHydraErr(raw, err)
 	}
@@ -79,7 +79,7 @@ func (s *KeyService) GetJsonWebKey(ctx context.Context, req *pb.GetJsonWebKeyReq
 	if _, err := s.auth.Check(ctx, authz.NewEntityResource(api.ResourceKey, "*"), authz.ReadAction); err != nil {
 		return nil, err
 	}
-	resp, raw, err := s.client.JwkApi.GetJsonWebKey(ctx, req.Kid, req.Set).Execute()
+	resp, raw, err := s.client.JwkAPI.GetJsonWebKey(ctx, req.Kid, req.Set).Execute()
 	if err != nil {
 		return nil, TransformHydraErr(raw, err)
 	}
@@ -90,7 +90,7 @@ func (s *KeyService) UpdateJsonWebKey(ctx context.Context, req *pb.UpdateJsonWeb
 	if _, err := s.auth.Check(ctx, authz.NewEntityResource(api.ResourceKey, "*"), authz.UpdateAction); err != nil {
 		return nil, err
 	}
-	resp, raw, err := s.client.JwkApi.SetJsonWebKey(ctx, req.Kid, req.Set).JsonWebKey(mapPbKey(req.Key)).Execute()
+	resp, raw, err := s.client.JwkAPI.SetJsonWebKey(ctx, req.Kid, req.Set).JsonWebKey(mapPbKey(req.Key)).Execute()
 	if err != nil {
 		return nil, TransformHydraErr(raw, err)
 	}

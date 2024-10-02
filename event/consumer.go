@@ -3,7 +3,7 @@ package event
 import (
 	"context"
 	"github.com/go-kratos/kratos/v2/transport"
-	"github.com/goava/di"
+	"github.com/defval/di"
 	"io"
 	"sync"
 )

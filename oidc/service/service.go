@@ -10,7 +10,7 @@ import (
 	kitdi "github.com/jace996/multiapp/pkg/di"
 	kitgrpc "github.com/jace996/multiapp/pkg/server/grpc"
 	kithttp "github.com/jace996/multiapp/pkg/server/http"
-	"github.com/goava/di"
+	"github.com/defval/di"
 	client "github.com/ory/hydra-client-go/v2"
 	"net/http"
 )

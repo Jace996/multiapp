@@ -15,7 +15,7 @@ import (
 	v14 "github.com/jace996/multiapp/user/api/role/v1"
 	v1 "github.com/jace996/multiapp/user/api/user/v1"
 	_ "github.com/jace996/multiapp/user/i18n"
-	"github.com/goava/di"
+	"github.com/defval/di"
 	"google.golang.org/grpc"
 )
 

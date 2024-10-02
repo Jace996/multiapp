@@ -4,10 +4,10 @@ import (
 	"context"
 	"fmt"
 	"github.com/casbin/casbin/v2/util"
+	"github.com/defval/di"
 	"github.com/go-kratos/kratos/v2/errors"
 	"github.com/jace996/multiapp/pkg/authz/authz"
 	kitdi "github.com/jace996/multiapp/pkg/di"
-	"github.com/goava/di"
 	"net/http"
 	"strings"
 )
@@ -48,7 +48,7 @@ func (p *PermissionService) ListAcl(ctx context.Context, subjects ...authz.Subje
 	if err != nil {
 		return nil, err
 	}
-	policies := enforcer.GetPolicy()
+	policies, _ := enforcer.GetPolicy()
 	var ret []authz.PermissionBean
 	for _, policy := range policies {
 		//tenant has been filtered by LoadFilteredPolicy

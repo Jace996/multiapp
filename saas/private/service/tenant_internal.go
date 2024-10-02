@@ -6,7 +6,7 @@ import (
 	"github.com/jace996/multiapp/pkg/conf"
 	pb "github.com/jace996/multiapp/saas/api/tenant/v1"
 	"github.com/jace996/multiapp/saas/private/biz"
-	"github.com/goxiaoy/vfs"
+	"github.com/jace996/vfs"
 	"github.com/samber/lo"
 )
 

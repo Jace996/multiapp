@@ -7,7 +7,7 @@ import (
 	"github.com/jace996/multiapp/pkg/blob"
 	"github.com/jace996/multiapp/product/private/biz"
 	"github.com/google/uuid"
-	"github.com/goxiaoy/vfs"
+	"github.com/jace996/vfs"
 	"io"
 	"mime"
 	"os"

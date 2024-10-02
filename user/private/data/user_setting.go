@@ -3,7 +3,7 @@ package data
 import (
 	"context"
 	v1 "github.com/jace996/multiapp/user/api/account/v1"
-	"github.com/goxiaoy/go-eventbus"
+	"github.com/jace996/go-eventbus"
 	"github.com/samber/lo"
 
 	kitgorm "github.com/jace996/multiapp/pkg/gorm"

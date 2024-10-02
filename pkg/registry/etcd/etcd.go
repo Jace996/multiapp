@@ -4,7 +4,7 @@ import (
 	klog "github.com/go-kratos/kratos/v2/log"
 	"github.com/go-kratos/kratos/v2/registry"
 	kregistry "github.com/jace996/multiapp/pkg/registry"
-	"github.com/goava/di"
+	"github.com/defval/di"
 	clientv3 "go.etcd.io/etcd/client/v3"
 	"strings"
 )

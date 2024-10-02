@@ -20,8 +20,8 @@ import (
 	v12 "github.com/jace996/multiapp/user/api/user/v1"
 	"github.com/jace996/multiapp/user/private/biz"
 	uhttp "github.com/jace996/multiapp/user/private/service/http"
-	"github.com/goava/di"
-	"github.com/goxiaoy/vfs"
+	"github.com/defval/di"
+	"github.com/jace996/vfs"
 	"net/http"
 )
 

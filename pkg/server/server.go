@@ -6,7 +6,7 @@ import (
 	kitdi "github.com/jace996/multiapp/pkg/di"
 	kregistry "github.com/jace996/multiapp/pkg/registry"
 	"github.com/jace996/multiapp/pkg/server/http"
-	"github.com/goava/di"
+	"github.com/defval/di"
 )
 
 var DefaultProviderSet = kitdi.NewSet(

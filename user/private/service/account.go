@@ -9,7 +9,7 @@ import (
 	"github.com/jace996/multiapp/pkg/utils"
 	"github.com/jace996/lbs"
 	"github.com/jace996/saas"
-	"github.com/goxiaoy/vfs"
+	"github.com/jace996/vfs"
 	"google.golang.org/protobuf/types/known/structpb"
 	"io"
 	"os"

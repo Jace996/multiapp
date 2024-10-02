@@ -5,7 +5,7 @@ import (
 	kitgorm "github.com/jace996/multiapp/pkg/gorm"
 	"github.com/jace996/multiapp/product/private/biz"
 	sgorm "github.com/jace996/saas/gorm"
-	"github.com/goxiaoy/go-eventbus"
+	"github.com/jace996/go-eventbus"
 	"gorm.io/gorm"
 )
 

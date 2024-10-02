@@ -6,7 +6,7 @@ import (
 	"github.com/go-kratos/kratos/v2/log"
 	kitdi "github.com/jace996/multiapp/pkg/di"
 	"github.com/jace996/saas"
-	"github.com/goava/di"
+	"github.com/defval/di"
 	"github.com/samber/lo"
 	"strings"
 )

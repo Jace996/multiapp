@@ -16,7 +16,7 @@ import (
 	"github.com/jace996/multiapp/pkg/gorm"
 	kitserver "github.com/jace996/multiapp/pkg/server"
 	kitgrpc "github.com/jace996/multiapp/pkg/server/grpc"
-	"github.com/goava/di"
+	"github.com/defval/di"
 	"google.golang.org/grpc/resolver"
 	"sync"
 )

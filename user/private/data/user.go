@@ -9,8 +9,8 @@ import (
 	"github.com/jace996/multiapp/user/private/biz"
 	"github.com/jace996/saas"
 	"github.com/google/uuid"
-	"github.com/goxiaoy/go-eventbus"
-	concurrency "github.com/goxiaoy/gorm-concurrency/v2"
+	"github.com/jace996/go-eventbus"
+	concurrency "github.com/jace996/gorm-concurrency/v2"
 	"gorm.io/gorm"
 )
 import "context"

@@ -3,7 +3,7 @@ package event
 import (
 	"context"
 	"fmt"
-	"github.com/goava/di"
+	"github.com/defval/di"
 	"sync"
 )
 

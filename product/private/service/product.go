@@ -14,7 +14,7 @@ import (
 	pb "github.com/jace996/multiapp/product/api/product/v1"
 	"github.com/jace996/multiapp/product/private/biz"
 	"github.com/google/uuid"
-	"github.com/goxiaoy/vfs"
+	"github.com/jace996/vfs"
 	"github.com/hibiken/asynq"
 	"github.com/samber/lo"
 	"google.golang.org/protobuf/types/known/timestamppb"

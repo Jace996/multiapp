@@ -5,8 +5,8 @@ import (
 	"github.com/aws/aws-sdk-go/aws/credentials"
 	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/jace996/multiapp/pkg/blob"
-	"github.com/goxiaoy/vfs"
-	s32 "github.com/goxiaoy/vfs/s3"
+	"github.com/jace996/vfs"
+	s32 "github.com/jace996/vfs/s3"
 	"net/url"
 	"time"
 )

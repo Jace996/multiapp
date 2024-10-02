@@ -29,7 +29,7 @@ func (s *ClientService) ListOAuth2Clients(ctx context.Context, req *pb.ListClien
 	if _, err := s.auth.Check(ctx, authz.NewEntityResource(api.ResourceClient, "*"), authz.ReadAction); err != nil {
 		return nil, err
 	}
-	rreq := s.client.OAuth2Api.ListOAuth2Clients(ctx).ClientName(req.ClientName).PageSize(req.Limit).Owner(req.Owner)
+	rreq := s.client.OAuth2API.ListOAuth2Clients(ctx).ClientName(req.ClientName).PageSize(req.Limit).Owner(req.Owner)
 	if len(req.AfterPageToken) > 0 {
 		rreq = rreq.PageToken(req.AfterPageToken)
 	}
@@ -72,7 +72,7 @@ func (s *ClientService) GetOAuth2Client(ctx context.Context, req *pb.GetOAuth2Cl
 	if _, err := s.auth.Check(ctx, authz.NewEntityResource(api.ResourceClient, "*"), authz.ReadAction); err != nil {
 		return nil, err
 	}
-	resp, raw, err := s.client.OAuth2Api.GetOAuth2Client(ctx, req.Id).Execute()
+	resp, raw, err := s.client.OAuth2API.GetOAuth2Client(ctx, req.Id).Execute()
 	if err != nil {
 		return nil, TransformHydraErr(raw, err)
 	}
@@ -84,7 +84,7 @@ func (s *ClientService) CreateOAuth2Client(ctx context.Context, req *pb.OAuth2Cl
 		return nil, err
 	}
 	c := mapOAuthClients(req)
-	resp, raw, err := s.client.OAuth2Api.CreateOAuth2Client(ctx).OAuth2Client(c).Execute()
+	resp, raw, err := s.client.OAuth2API.CreateOAuth2Client(ctx).OAuth2Client(c).Execute()
 	if err != nil {
 		return nil, TransformHydraErr(raw, err)
 	}
@@ -94,7 +94,7 @@ func (s *ClientService) DeleteOAuth2Client(ctx context.Context, req *pb.DeleteOA
 	if _, err := s.auth.Check(ctx, authz.NewEntityResource(api.ResourceClient, "*"), authz.DeleteAction); err != nil {
 		return nil, err
 	}
-	raw, err := s.client.OAuth2Api.DeleteOAuth2Client(ctx, req.Id).Execute()
+	raw, err := s.client.OAuth2API.DeleteOAuth2Client(ctx, req.Id).Execute()
 	if err != nil {
 		return nil, TransformHydraErr(raw, err)
 	}
@@ -104,7 +104,7 @@ func (s *ClientService) PatchOAuth2Client(ctx context.Context, req *pb.PatchOAut
 	if _, err := s.auth.Check(ctx, authz.NewEntityResource(api.ResourceClient, "*"), authz.UpdateAction); err != nil {
 		return nil, err
 	}
-	resp, raw, err := s.client.OAuth2Api.PatchOAuth2Client(ctx, req.Id).JsonPatch(lo.Map(req.Client, func(t *pb.PatchOAuth2Client, _ int) client.JsonPatch {
+	resp, raw, err := s.client.OAuth2API.PatchOAuth2Client(ctx, req.Id).JsonPatch(lo.Map(req.Client, func(t *pb.PatchOAuth2Client, _ int) client.JsonPatch {
 		return client.JsonPatch{
 			From:  t.From,
 			Op:    t.Op,
@@ -122,7 +122,7 @@ func (s *ClientService) UpdateOAuth2Client(ctx context.Context, req *pb.UpdateOA
 	if _, err := s.auth.Check(ctx, authz.NewEntityResource(api.ResourceClient, "*"), authz.UpdateAction); err != nil {
 		return nil, err
 	}
-	resp, raw, err := s.client.OAuth2Api.SetOAuth2Client(ctx, req.Id).OAuth2Client(mapOAuthClients(req.Client)).Execute()
+	resp, raw, err := s.client.OAuth2API.SetOAuth2Client(ctx, req.Id).OAuth2Client(mapOAuthClients(req.Client)).Execute()
 	if err != nil {
 		return nil, TransformHydraErr(raw, err)
 	}

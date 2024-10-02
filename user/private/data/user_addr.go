@@ -4,7 +4,7 @@ import (
 	"context"
 	kitgorm "github.com/jace996/multiapp/pkg/gorm"
 	"github.com/jace996/multiapp/user/private/biz"
-	"github.com/goxiaoy/go-eventbus"
+	"github.com/jace996/go-eventbus"
 	"gorm.io/gorm"
 )
 

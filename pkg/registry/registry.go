@@ -4,7 +4,7 @@ import (
 	"context"
 	"fmt"
 	"github.com/go-kratos/kratos/v2/registry"
-	"github.com/goava/di"
+	"github.com/defval/di"
 	"sync"
 )
 

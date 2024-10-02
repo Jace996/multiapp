@@ -12,7 +12,7 @@ import (
 	"github.com/jace996/multiapp/pkg/conf"
 	kitdi "github.com/jace996/multiapp/pkg/di"
 	kregistry "github.com/jace996/multiapp/pkg/registry"
-	"github.com/goava/di"
+	"github.com/defval/di"
 	grpcx "google.golang.org/grpc"
 	"google.golang.org/protobuf/proto"
 	"google.golang.org/protobuf/types/known/durationpb"

@@ -3,7 +3,7 @@ package conf
 import (
 	"github.com/go-kratos/kratos/v2/config"
 	"github.com/go-kratos/kratos/v2/config/env"
-	vvfs "github.com/goxiaoy/vfs"
+	vvfs "github.com/jace996/vfs"
 	"github.com/spf13/afero"
 	"io"
 	"io/fs"

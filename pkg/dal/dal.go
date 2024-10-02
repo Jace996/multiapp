@@ -16,9 +16,9 @@ import (
 	"github.com/jace996/saas"
 	"github.com/jace996/saas/data"
 	sgorm "github.com/jace996/saas/gorm"
-	"github.com/goava/di"
-	"github.com/goxiaoy/go-eventbus"
-	"github.com/goxiaoy/vfs"
+	"github.com/defval/di"
+	"github.com/jace996/go-eventbus"
+	"github.com/jace996/vfs"
 
 	_ "github.com/jace996/multiapp/event/kafka"
 	_ "github.com/jace996/multiapp/event/pulsar"

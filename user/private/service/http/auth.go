@@ -55,13 +55,13 @@ func (a *Auth) LoginGet(w http.ResponseWriter, r *http.Request) (*v1.GetLoginRes
 
 	if len(req.LoginChallenge) > 0 {
 		//hydra
-		if hreq, raw, err := a.hclient.OAuth2Api.GetOAuth2LoginRequest(r.Context()).LoginChallenge(req.LoginChallenge).Execute(); err != nil {
+		if hreq, raw, err := a.hclient.OAuth2API.GetOAuth2LoginRequest(r.Context()).LoginChallenge(req.LoginChallenge).Execute(); err != nil {
 			return resp, service.TransformHydraErr(raw, err)
 		} else {
 			// If hydra was already able to authenticate the user, skip will be true and we do not need to re-authenticate
 			// the user.
 			if hreq.Skip {
-				acc, raw, err := a.hclient.OAuth2Api.AcceptOAuth2LoginRequest(r.Context()).
+				acc, raw, err := a.hclient.OAuth2API.AcceptOAuth2LoginRequest(r.Context()).
 					LoginChallenge(hreq.Challenge).
 					AcceptOAuth2LoginRequest(*client.NewAcceptOAuth2LoginRequest(hreq.Subject)).
 					Execute()
@@ -71,7 +71,7 @@ func (a *Auth) LoginGet(w http.ResponseWriter, r *http.Request) (*v1.GetLoginRes
 				resp.Redirect = acc.RedirectTo
 			} else if len(ui.GetId()) > 0 {
 				//user logged in
-				acc, raw, err := a.hclient.OAuth2Api.AcceptOAuth2LoginRequest(r.Context()).
+				acc, raw, err := a.hclient.OAuth2API.AcceptOAuth2LoginRequest(r.Context()).
 					LoginChallenge(hreq.Challenge).
 					AcceptOAuth2LoginRequest(*client.NewAcceptOAuth2LoginRequest(ui.GetId())).
 					Execute()
@@ -110,7 +110,7 @@ func (a *Auth) LoginPost(w http.ResponseWriter, r *http.Request) (*v1.WebLoginAu
 			//TODO error
 			reject.SetError("access_denied")
 			reject.SetErrorDescription("The resource owner denied the request")
-			hreq, raw, err := a.hclient.OAuth2Api.RejectOAuth2LoginRequest(r.Context()).LoginChallenge(req.Challenge).RejectOAuth2Request(reject).Execute()
+			hreq, raw, err := a.hclient.OAuth2API.RejectOAuth2LoginRequest(r.Context()).LoginChallenge(req.Challenge).RejectOAuth2Request(reject).Execute()
 			if err != nil {
 				return resp, service.TransformHydraErr(raw, err)
 			}
@@ -131,7 +131,7 @@ func (a *Auth) LoginPost(w http.ResponseWriter, r *http.Request) (*v1.WebLoginAu
 		//TODO from config
 		acc.SetRememberFor(3600)
 		acc.SetSubject(uid)
-		hreq, raw, err := a.hclient.OAuth2Api.AcceptOAuth2LoginRequest(r.Context()).
+		hreq, raw, err := a.hclient.OAuth2API.AcceptOAuth2LoginRequest(r.Context()).
 			LoginChallenge(req.Challenge).
 			AcceptOAuth2LoginRequest(acc).Execute()
 		if err != nil {
@@ -149,7 +149,7 @@ func (a *Auth) LoginOutGet(w http.ResponseWriter, r *http.Request) (*v1.GetLogou
 	}
 	var resp = &v1.GetLogoutResponse{}
 	if len(req.LogoutChallenge) > 0 {
-		_, raw, err := a.hclient.OAuth2Api.GetOAuth2LogoutRequest(r.Context()).LogoutChallenge(req.LogoutChallenge).Execute()
+		_, raw, err := a.hclient.OAuth2API.GetOAuth2LogoutRequest(r.Context()).LogoutChallenge(req.LogoutChallenge).Execute()
 		if err != nil {
 			return resp, service.TransformHydraErr(raw, err)
 		}
@@ -170,7 +170,7 @@ func (a *Auth) Logout(w http.ResponseWriter, r *http.Request) (*v1.LogoutRespons
 		return resp, err
 	}
 	if len(req.Challenge) > 0 {
-		hreq, raw, err := a.hclient.OAuth2Api.AcceptOAuth2LogoutRequest(r.Context()).LogoutChallenge(req.Challenge).Execute()
+		hreq, raw, err := a.hclient.OAuth2API.AcceptOAuth2LogoutRequest(r.Context()).LogoutChallenge(req.Challenge).Execute()
 		if err != nil {
 			return resp, service.TransformHydraErr(raw, err)
 		}
@@ -194,7 +194,7 @@ func (a *Auth) ConsentGet(w http.ResponseWriter, r *http.Request) (*v1.GetConsen
 	if len(req.ConsentChallenge) == 0 {
 		return resp, errors.BadRequest("CONSENT_CHALLENGE_REQUIRED", "")
 	}
-	hreq, raw, err := a.hclient.OAuth2Api.GetOAuth2ConsentRequest(r.Context()).ConsentChallenge(req.ConsentChallenge).Execute()
+	hreq, raw, err := a.hclient.OAuth2API.GetOAuth2ConsentRequest(r.Context()).ConsentChallenge(req.ConsentChallenge).Execute()
 	if err != nil {
 		return resp, service.TransformHydraErr(raw, err)
 	}
@@ -209,7 +209,7 @@ func (a *Auth) ConsentGet(w http.ResponseWriter, r *http.Request) (*v1.GetConsen
 		//	AccessToken: nil,
 		//	IdToken:     nil,
 		//})
-		accReq, raw, err := a.hclient.OAuth2Api.AcceptOAuth2ConsentRequest(r.Context()).ConsentChallenge(req.ConsentChallenge).AcceptOAuth2ConsentRequest(acc).Execute()
+		accReq, raw, err := a.hclient.OAuth2API.AcceptOAuth2ConsentRequest(r.Context()).ConsentChallenge(req.ConsentChallenge).AcceptOAuth2ConsentRequest(acc).Execute()
 		if err != nil {
 			return resp, service.TransformHydraErr(raw, err)
 		}
@@ -244,7 +244,7 @@ func (a *Auth) Consent(w http.ResponseWriter, r *http.Request) (*v1.GrantConsent
 		//TODO
 		reject.SetError("access_denied")
 		reject.SetErrorDescription("The resource owner denied the request")
-		hreq, raw, err := a.hclient.OAuth2Api.RejectOAuth2ConsentRequest(r.Context()).ConsentChallenge(req.Challenge).RejectOAuth2Request(reject).Execute()
+		hreq, raw, err := a.hclient.OAuth2API.RejectOAuth2ConsentRequest(r.Context()).ConsentChallenge(req.Challenge).RejectOAuth2Request(reject).Execute()
 		if err != nil {
 			return resp, service.TransformHydraErr(raw, err)
 		}
@@ -268,7 +268,7 @@ func (a *Auth) Consent(w http.ResponseWriter, r *http.Request) (*v1.GrantConsent
 	//   session.id_token.given_name = 'John'
 	// }
 
-	hreq, raw, err := a.hclient.OAuth2Api.GetOAuth2ConsentRequest(r.Context()).ConsentChallenge(req.Challenge).Execute()
+	hreq, raw, err := a.hclient.OAuth2API.GetOAuth2ConsentRequest(r.Context()).ConsentChallenge(req.Challenge).Execute()
 	if err != nil {
 		return resp, service.TransformHydraErr(raw, err)
 	}
@@ -284,7 +284,7 @@ func (a *Auth) Consent(w http.ResponseWriter, r *http.Request) (*v1.GrantConsent
 	acc.SetRemember(true)
 	acc.SetRememberFor(3600)
 
-	accReq, raw, err := a.hclient.OAuth2Api.AcceptOAuth2ConsentRequest(r.Context()).ConsentChallenge(req.Challenge).AcceptOAuth2ConsentRequest(*acc).Execute()
+	accReq, raw, err := a.hclient.OAuth2API.AcceptOAuth2ConsentRequest(r.Context()).ConsentChallenge(req.Challenge).AcceptOAuth2ConsentRequest(*acc).Execute()
 	if err != nil {
 		return resp, service.TransformHydraErr(raw, err)
 	}

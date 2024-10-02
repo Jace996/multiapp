@@ -2,10 +2,10 @@ package kafka
 
 import (
 	"context"
-	"github.com/Shopify/sarama"
+	"github.com/IBM/sarama"
 	"github.com/go-kratos/kratos/v2/log"
 	"github.com/jace996/multiapp/event"
-	"github.com/goava/di"
+	"github.com/defval/di"
 	"strings"
 	"sync"
 )

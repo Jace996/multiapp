@@ -14,7 +14,7 @@ import (
 	"github.com/jace996/saas"
 	"github.com/jace996/saas/seed"
 	"github.com/jace996/uow"
-	"github.com/goava/di"
+	"github.com/defval/di"
 )
 
 // ProviderSet is server providers.

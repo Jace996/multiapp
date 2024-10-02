@@ -16,7 +16,7 @@ import (
 	"github.com/jace996/multiapp/pkg/server/endpoint"
 	"github.com/gorilla/handlers"
 	"github.com/gorilla/mux"
-	"github.com/goxiaoy/vfs"
+	"github.com/jace996/vfs"
 	"github.com/spf13/afero"
 	"net"
 	"net/http"

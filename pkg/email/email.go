@@ -3,7 +3,7 @@ package email
 import (
 	"context"
 	"fmt"
-	"github.com/goava/di"
+	"github.com/defval/di"
 	mail "github.com/wneessen/go-mail"
 	"google.golang.org/protobuf/proto"
 )

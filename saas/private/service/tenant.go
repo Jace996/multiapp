@@ -18,7 +18,7 @@ import (
 	"github.com/jace996/saas"
 	shttp "github.com/jace996/saas/http"
 	"github.com/jace996/sessions"
-	"github.com/goxiaoy/vfs"
+	"github.com/jace996/vfs"
 	"github.com/segmentio/ksuid"
 	"io"
 	"os"

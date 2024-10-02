@@ -2,7 +2,7 @@ package os
 
 import (
 	"github.com/jace996/multiapp/pkg/blob"
-	"github.com/goxiaoy/vfs"
+	"github.com/jace996/vfs"
 	"github.com/spf13/afero"
 	"net/url"
 )

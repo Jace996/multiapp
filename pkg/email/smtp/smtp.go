@@ -5,7 +5,7 @@ import (
 	"crypto/tls"
 	"fmt"
 	"github.com/jace996/multiapp/pkg/email"
-	"github.com/goava/di"
+	"github.com/defval/di"
 	mail "github.com/wneessen/go-mail"
 )
 

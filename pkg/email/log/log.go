@@ -4,7 +4,7 @@ import (
 	"context"
 	"github.com/go-kratos/kratos/v2/log"
 	"github.com/jace996/multiapp/pkg/email"
-	"github.com/goava/di"
+	"github.com/defval/di"
 	"github.com/samber/lo"
 	mail "github.com/wneessen/go-mail"
 )

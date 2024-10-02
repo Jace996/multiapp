@@ -4,7 +4,7 @@ import (
 	"github.com/jace996/multiapp/event"
 	"github.com/jace996/multiapp/pkg/dal"
 	kitdi "github.com/jace996/multiapp/pkg/di"
-	"github.com/goava/di"
+	"github.com/defval/di"
 )
 
 // ProviderSet is biz providers.

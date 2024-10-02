@@ -31,7 +31,7 @@ address http://saas.nihaosaoya.com (Shanghai)
 * [x] Distributed Eventbus: [kafka](https://kafka.apache.org/), [pulsar](https://pulsar.apache.org/)
 * [x] Cache (Redis)
 * [x] Background Job: [asynq](https://github.com/hibiken/asynq)
-* [x] Virtual File System: [vfs](https://github.com/goxiaoy/vfs)
+* [x] Virtual File System: [vfs](https://github.com/jace996/vfs)
 * [x] Distributed Transaction: [dtm](https://dtm.pub/)
 * [x] OpenId Connect: [ory](https://www.ory.sh/)
 * [x] Logging/Tracing

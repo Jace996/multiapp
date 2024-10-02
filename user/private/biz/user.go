@@ -6,7 +6,7 @@ import (
 	kitgorm "github.com/jace996/multiapp/pkg/gorm"
 	v1 "github.com/jace996/multiapp/user/api/user/v1"
 	"github.com/jace996/saas"
-	concurrency "github.com/goxiaoy/gorm-concurrency/v2"
+	concurrency "github.com/jace996/gorm-concurrency/v2"
 	"github.com/samber/lo"
 	"gorm.io/gorm"
 	"time"

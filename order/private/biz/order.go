@@ -9,7 +9,7 @@ import (
 	"github.com/jace996/multiapp/pkg/price"
 	"github.com/jace996/lbs"
 	gorm2 "github.com/jace996/saas/gorm"
-	concurrency "github.com/goxiaoy/gorm-concurrency/v2"
+	concurrency "github.com/jace996/gorm-concurrency/v2"
 	"github.com/lithammer/shortuuid/v3"
 	"github.com/segmentio/ksuid"
 	"gorm.io/gorm"

@@ -9,7 +9,7 @@ import (
 	v1 "github.com/jace996/multiapp/saas/api/tenant/v1"
 	"github.com/jace996/multiapp/saas/private/biz"
 	"github.com/google/uuid"
-	"github.com/goxiaoy/go-eventbus"
+	"github.com/jace996/go-eventbus"
 	"gorm.io/gorm"
 )
 

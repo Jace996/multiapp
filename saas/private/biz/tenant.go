@@ -7,7 +7,7 @@ import (
 	"github.com/jace996/multiapp/pkg/query"
 	v1 "github.com/jace996/multiapp/saas/api/tenant/v1"
 	"github.com/google/uuid"
-	concurrency "github.com/goxiaoy/gorm-concurrency/v2"
+	concurrency "github.com/jace996/gorm-concurrency/v2"
 	"gorm.io/gorm"
 	"time"
 )

@@ -7,7 +7,7 @@ import (
 	v1 "github.com/jace996/multiapp/realtime/api/notification/v1"
 	"github.com/jace996/multiapp/realtime/private/biz"
 	sgorm "github.com/jace996/saas/gorm"
-	"github.com/goxiaoy/go-eventbus"
+	"github.com/jace996/go-eventbus"
 	"gorm.io/gorm"
 )
 

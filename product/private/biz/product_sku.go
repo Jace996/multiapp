@@ -3,7 +3,7 @@ package biz
 import (
 	kitgorm "github.com/jace996/multiapp/pkg/gorm"
 	sgorm "github.com/jace996/saas/gorm"
-	concurrency "github.com/goxiaoy/gorm-concurrency/v2"
+	concurrency "github.com/jace996/gorm-concurrency/v2"
 	"time"
 )
 

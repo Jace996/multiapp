@@ -13,8 +13,8 @@ import (
 	v12 "github.com/jace996/multiapp/saas/api/plan/v1"
 	v1 "github.com/jace996/multiapp/saas/api/tenant/v1"
 	"github.com/jace996/multiapp/saas/private/biz"
-	"github.com/goava/di"
-	"github.com/goxiaoy/vfs"
+	"github.com/defval/di"
+	"github.com/jace996/vfs"
 	"net/http"
 )
 

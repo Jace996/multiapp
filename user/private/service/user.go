@@ -9,7 +9,7 @@ import (
 	v12 "github.com/jace996/multiapp/user/api/permission/v1"
 	"github.com/jace996/multiapp/user/util"
 	"github.com/jace996/saas"
-	"github.com/goxiaoy/vfs"
+	"github.com/jace996/vfs"
 	"io"
 	"os"
 	"path/filepath"

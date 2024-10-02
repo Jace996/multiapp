@@ -2,7 +2,7 @@ package event
 
 import (
 	"context"
-	"github.com/goava/di"
+	"github.com/defval/di"
 	"io"
 	"sync"
 )

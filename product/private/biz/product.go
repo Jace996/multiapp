@@ -9,7 +9,7 @@ import (
 	sgorm "github.com/jace996/saas/gorm"
 	"gorm.io/gorm"
 
-	concurrency "github.com/goxiaoy/gorm-concurrency/v2"
+	concurrency "github.com/jace996/gorm-concurrency/v2"
 	"time"
 )
 

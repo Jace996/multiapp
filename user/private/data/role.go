@@ -3,7 +3,7 @@ package data
 import (
 	"context"
 	"errors"
-	"github.com/goxiaoy/go-eventbus"
+	"github.com/jace996/go-eventbus"
 
 	kitgorm "github.com/jace996/multiapp/pkg/gorm"
 	v12 "github.com/jace996/multiapp/user/api/role/v1"

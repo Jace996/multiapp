@@ -6,7 +6,7 @@ import (
 	"github.com/go-kratos/kratos/v2/log"
 	"github.com/jace996/multiapp/event"
 	"github.com/jace996/lazy"
-	"github.com/goava/di"
+	"github.com/defval/di"
 	"sync"
 )
 

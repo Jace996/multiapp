@@ -7,7 +7,7 @@ import (
 	kitconf "github.com/jace996/multiapp/pkg/conf"
 	"github.com/jace996/multiapp/pkg/dal"
 	uow2 "github.com/jace996/uow"
-	"github.com/goava/di"
+	"github.com/defval/di"
 )
 
 func NewEventServer(

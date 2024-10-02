@@ -8,7 +8,7 @@ import (
 	"github.com/jace996/multiapp/pkg/query"
 	v12 "github.com/jace996/multiapp/user/api/role/v1"
 	sgorm "github.com/jace996/saas/gorm"
-	concurrency "github.com/goxiaoy/gorm-concurrency/v2"
+	concurrency "github.com/jace996/gorm-concurrency/v2"
 )
 
 type Role struct {

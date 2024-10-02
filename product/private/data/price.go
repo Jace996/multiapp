@@ -6,7 +6,7 @@ import (
 	v1 "github.com/jace996/multiapp/product/api/price/v1"
 	"github.com/jace996/multiapp/product/private/biz"
 	sgorm "github.com/jace996/saas/gorm"
-	"github.com/goxiaoy/go-eventbus"
+	"github.com/jace996/go-eventbus"
 	"gorm.io/gorm"
 )
 

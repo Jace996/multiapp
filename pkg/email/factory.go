@@ -1,7 +1,7 @@
 package email
 
 import (
-	"github.com/goava/di"
+	"github.com/defval/di"
 	"sync"
 )
 

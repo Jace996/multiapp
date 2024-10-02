@@ -11,7 +11,7 @@ import (
 	"github.com/jace996/multiapp/pkg/data"
 	"github.com/jace996/multiapp/pkg/query"
 	sgorm "github.com/jace996/saas/gorm"
-	eventbus "github.com/goxiaoy/go-eventbus"
+	eventbus "github.com/jace996/go-eventbus"
 	"gorm.io/gorm"
 )
 

@@ -20,7 +20,7 @@ import (
 	"github.com/jace996/multiapp/user/private/biz"
 	"github.com/jace996/saas"
 	"github.com/jace996/saas/seed"
-	"github.com/goxiaoy/vfs"
+	"github.com/jace996/vfs"
 	"github.com/samber/lo"
 	"github.com/stripe/stripe-go/v76"
 	stripeclient "github.com/stripe/stripe-go/v76/client"

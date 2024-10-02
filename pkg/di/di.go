@@ -2,7 +2,7 @@ package di
 
 import (
 	"fmt"
-	"github.com/goava/di"
+	"github.com/defval/di"
 	"reflect"
 )
 
