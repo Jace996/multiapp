@@ -1,9 +1,9 @@
-version: '3.7'
+#version: '3.7'
 services:
 
-  web:
-    image: ${DOCKER_REGISTRY}multiapp-frontend:${DOCKER_TAG:-latest}
-    restart: unless-stopped
+#  web:
+#    image: ${DOCKER_REGISTRY}multiapp-frontend:${DOCKER_TAG:-latest}
+#    restart: unless-stopped
 
   api_docs:
     image: ${DOCKER_REGISTRY}multiapp-swagger:${DOCKER_TAG:-latest}
@@ -99,7 +99,7 @@ services:
       - etcd_data:/bitnami/etcd
 
   dtm:
-    image: jace996/dtm:1.17.9
+    image: jaceliaw/dtm:1.17.9
     restart: unless-stopped
     command: ["-c", "/data/conf.yml"]
     volumes:

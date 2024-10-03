@@ -1,2 +1,4 @@
 version: v1
-name: buf.build/jace/multiapp
+#name: buf.build/jace/multiapp
+deps:
+  - buf.build/jace/multiapp
