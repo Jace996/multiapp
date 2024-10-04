@@ -346,8 +346,8 @@ github.com/inconshreveable/mousetrap v1.1.0 h1:wN+x4NVGpMsO7ErUn/mUI3vEoE6Jt13X2
 github.com/inconshreveable/mousetrap v1.1.0/go.mod h1:vpF70FUmC8bwa3OWnCshd2FqLfsEA9PFc4w1p2J65bw=
 github.com/jace996/dtm v0.0.0-20231026165303-b379b7f910b5 h1:q6jddCi+vylDfeJ/P6ZGIACuGOcXqmoXqYgE1w0cydU=
 github.com/jace996/dtm v0.0.0-20231026165303-b379b7f910b5/go.mod h1:knn04SHT+vn77pmdVly1yFOFdSMGZiV5MAlK4hHS1q4=
-github.com/jace996/go-eventbus v0.0.6 h1:dXvEAbA9grZR8yvDfn5vvd7RTklKeMGrlVfz717QFss=
-github.com/jace996/go-eventbus v0.0.6/go.mod h1:faP963jXrTvt+9COqh9oMReM35a29fofmHEtlxJFZ10=
+github.com/jace996/go-eventbus v0.0.7 h1:/hBTh1G9QFrYvhFNefstClC+2Qo2RtaPymWFpi99eUk=
+github.com/jace996/go-eventbus v0.0.7/go.mod h1:jAW6+8UkSR/glHF2M2LQELUO1ZYq20Bc98gOAkNJYz8=
 github.com/jace996/go-i18n/v2 v2.2.2 h1:eS2h/jtUeNxUClk9Fx5cdL3utk4mfhuNHm9pYbf/NfQ=
 github.com/jace996/go-i18n/v2 v2.2.2/go.mod h1:UEEc13IUEUkbvFJkAU4W5RKnlb51JEnf95bhSHKIL6k=
 github.com/jace996/lbs v0.0.3 h1:6ctxnNyTRQmTmmkGPa84s88NNXyA0cW8B0f6jXoDuAk=

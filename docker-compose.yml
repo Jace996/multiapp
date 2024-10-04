@@ -99,7 +99,7 @@ services:
       - etcd_data:/bitnami/etcd
 
   dtm:
-    image: jaceliaw/dtm:1.17.9
+    image: jace996/dtm:1.18.1
     restart: unless-stopped
     command: ["-c", "/data/conf.yml"]
     volumes:

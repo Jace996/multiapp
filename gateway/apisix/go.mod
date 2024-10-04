@@ -1,6 +1,6 @@
 module github.com/jace996/multiapp/gateway/apisix
 
-go 1.23.2
+go 1.23
 
 require (
 	github.com/apache/apisix-go-plugin-runner v0.5.0
@@ -61,7 +61,7 @@ require (
 	github.com/grpc-ecosystem/grpc-gateway/v2 v2.22.0 // indirect
 	github.com/iancoleman/strcase v0.3.0 // indirect
 	github.com/inconshreveable/mousetrap v1.1.0 // indirect
-	github.com/jace996/go-eventbus v0.0.6 // indirect
+	github.com/jace996/go-eventbus v0.0.7 // indirect
 	github.com/jace996/go-i18n/v2 v2.2.2 // indirect
 	github.com/jace996/lbs v0.0.3 // indirect
 	github.com/jace996/uow v0.0.8 // indirect

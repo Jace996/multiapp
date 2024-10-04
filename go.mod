@@ -1,6 +1,6 @@
 module github.com/jace996/multiapp
 
-go 1.23.2
+go 1.23
 
 require (
 	github.com/BurntSushi/toml v1.4.0
@@ -31,10 +31,10 @@ require (
 	github.com/gorilla/handlers v1.5.2
 	github.com/gorilla/mux v1.8.1
 	github.com/grpc-ecosystem/grpc-gateway/v2 v2.22.0
-	github.com/hibiken/asynq v0.24.1
-	github.com/hibiken/asynqmon v0.7.2
+	github.com/hibiken/asynq v0.23.0
+	github.com/hibiken/asynqmon v0.7.1
 	github.com/iancoleman/strcase v0.3.0
-	github.com/jace996/go-eventbus v0.0.6
+	github.com/jace996/go-eventbus v0.0.7
 	github.com/jace996/go-i18n/v2 v2.2.2
 	github.com/jace996/gorm-concurrency/v2 v2.0.3
 	github.com/jace996/lazy v1.0.1
@@ -72,7 +72,7 @@ require (
 	golang.org/x/sync v0.8.0
 	golang.org/x/text v0.18.0
 	google.golang.org/genproto/googleapis/api v0.0.0-20240930140551-af27646dc61f
-	google.golang.org/grpc v1.67.1
+	google.golang.org/grpc v1.67.0
 	google.golang.org/protobuf v1.34.2
 	gopkg.in/yaml.v3 v3.0.1
 	gorm.io/driver/mysql v1.5.7
@@ -191,7 +191,6 @@ require (
 	github.com/prometheus/common v0.55.0 // indirect
 	github.com/prometheus/procfs v0.15.1 // indirect
 	github.com/rcrowley/go-metrics v0.0.0-20201227073835-cf1acfcdf475 // indirect
-	github.com/redis/go-redis/v9 v9.0.4 // indirect
 	github.com/redis/rueidis v1.0.45 // indirect
 	github.com/remyoudompheng/bigfft v0.0.0-20230126093431-47fa9a501578 // indirect
 	github.com/robfig/cron/v3 v3.0.1 // indirect
